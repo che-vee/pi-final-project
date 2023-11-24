@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext("2d");
 
 canvas.width = document.body.scrollWidth;
-canvas.height = document.body.scrollHeight;
+canvas.height = document.body.scrollHeight + 3300; //temporary fix for full scroll canvas
 
 // Set initial properties
 canvasContext.lineJoin = "round";

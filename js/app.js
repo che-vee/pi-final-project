@@ -19,7 +19,8 @@ let currentImageIndex = 0;
 let startX = 0;
 let endX = 0;
 
-const APIKey = process.env.UNSPLASH_API_KEY;
+const APIKey =
+	"c3ba5fa8e844fc1b4ef1ca56625e6e625aa111c6f8d5a0a68ff985fe5f001866"; //not best practice but no .env support on github pages
 
 // Function to fetch random image from Unsplash API
 async function fetchRandomImage() {
