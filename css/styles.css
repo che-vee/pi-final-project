@@ -192,7 +192,7 @@ span {
 	margin: 1rem 4rem;
 
 	@media (min-width: 768px) {
-		margin: 1rem 3rem;
+		margin: 1rem 6rem;
 	}
 	@media (min-width: 1200px) {
 		margin: 1rem 9rem;
@@ -217,7 +217,8 @@ span {
 	@media (min-width: 768px) {
 		margin: 0 4rem;
 	}
-	@media (min-width: 1200px) {
+
+	@media (min-width: 1600px) {
 		margin: 1rem 10rem;
 	}
 }
@@ -263,7 +264,7 @@ span {
 #gallery-text-container p {
 	padding: 4rem 1rem;
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1600px) {
 		padding: 4rem 15rem;
 	}
 }
