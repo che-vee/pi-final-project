@@ -114,12 +114,12 @@
 
 #### `fetchRandomImage()`
 
--   Fetches a random landscape wildlife image from unsplash
--   Updates the image source and alt description
+-   Fetches a random landscape wildlife image from unsplash.
+-   Updates the image source and alt description.
 
 #### `fetchImages()`
 
--   Fetches images for each category
+-   Fetches images for each category.
 -   Processes and appends fetched images with categories to `imagesData`.
 -   Updates the grid display with new images.
 
@@ -136,6 +136,7 @@
 -   Calculates click position to determine scroll direction.
 -   Scrolls carousel left or right based on click position.
 -   Determines swipe direction and scrolls carousel left or right based on swip gesture.
+-   Scroll carousel with keyboard navigation.
 
 ### Deployment
 

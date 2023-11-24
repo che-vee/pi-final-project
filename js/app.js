@@ -212,6 +212,14 @@ carousel.addEventListener("touchend", (event) => {
 	}
 });
 
+document.addEventListener("keydown", (event) => {
+	if (event.key === "ArrowLeft") {
+		onPrevClick();
+	} else if (event.key === "ArrowRight") {
+		onNextClick();
+	}
+});
+
 // GSAP timelines
 let tlOnLoad = gsap.timeline();
 
