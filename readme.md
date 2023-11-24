@@ -1,0 +1,16 @@
+- [ ] Add interactive background
+- [ ] Render image grids of some data. (your projects, tweets, products)
+- [ ] Form to send emails
+- [ ] Sort data in grid view
+- [ ] Search or filter grid view
+- [ ] Change background color (dark and light)
+- [ ] Micro animation
+- [ ] Scroll interactions
+- [ ] Download CV (if portfolio)
+- [ ] Language translation
+- [ ] Drag list item or grid items around and reorder
+- [ ] Deploy by Github Pages (or Vercel)
+- [ ] Accessibility
+- [ ] Responsive on all devices
+- [ ] Fetch data from API
+- [ ] Extra additions and creativity
