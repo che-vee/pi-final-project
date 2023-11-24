@@ -16,6 +16,8 @@ const body = document.body;
 const categories = ["safari", "wildlife", "nature"];
 const imagesData = [];
 let currentImageIndex = 0;
+let startX = 0;
+let endX = 0;
 
 const APIKey = process.env.UNSPLASH_API_KEY;
 
@@ -81,6 +83,20 @@ const displayCarouselImages = () => {
 			image.alt_description || "Wildlife image"
 		}" />`;
 		carousel.appendChild(carouselItem);
+	});
+};
+
+const onPrevClick = () => {
+	carousel.scrollTo({
+		left: carousel.scrollLeft - carousel.offsetWidth,
+		behavior: "smooth",
+	});
+};
+
+const onNextClick = () => {
+	carousel.scrollTo({
+		left: carousel.scrollLeft + carousel.offsetWidth,
+		behavior: "smooth",
 	});
 };
 
@@ -172,15 +188,27 @@ carousel.addEventListener("click", (event) => {
 	let thirdOfCarousel = carouselRect.width / 3;
 
 	if (clickPosition < thirdOfCarousel) {
-		carousel.scrollTo({
-			left: carousel.scrollLeft - carousel.offsetWidth,
-			behavior: "smooth",
-		});
+		onNextClick();
 	} else if (clickPosition > 2 * thirdOfCarousel) {
-		carousel.scrollTo({
-			left: carousel.scrollLeft + carousel.offsetWidth,
-			behavior: "smooth",
-		});
+		onPrevClick();
+	}
+});
+
+carousel.addEventListener(
+	"touchstart",
+	(event) => {
+		event.preventDefault();
+		startX = event.changedTouches[0].screenX;
+	},
+	{ passive: false }
+);
+
+carousel.addEventListener("touchend", (event) => {
+	endX = event.changedTouches[0].screenX;
+	if (endX < startX) {
+		onNextClick();
+	} else if (endX > startX) {
+		onPrevClick();
 	}
 });
 
@@ -215,7 +243,6 @@ gsap.to("#image-container img", {
 		start: "top top",
 		end: "bottom top",
 		scrub: 3,
-		markers: true,
 	},
 });
 

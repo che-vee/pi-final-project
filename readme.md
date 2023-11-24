@@ -134,7 +134,8 @@
 #### `carousel.addEventListener`
 
 -   Calculates click position to determine scroll direction.
--   Scrolls carousel left or right smoothly based on click position.
+-   Scrolls carousel left or right based on click position.
+-   Determines swipe direction and scrolls carousel left or right based on swip gesture.
 
 ### Deployment
 
