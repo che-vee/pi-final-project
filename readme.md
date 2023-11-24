@@ -103,6 +103,8 @@
 -   Semantic HTML elements for structure. `<header>`, `<form>`
 -   `alt` tags for image descriptions.
 -   `rem` for responsive font sizing.
+-   Swipe gestures adn keyboard navigation.
+-   ARIA attribute.
 
 ### Responsive Design
 
